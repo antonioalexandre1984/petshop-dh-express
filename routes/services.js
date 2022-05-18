@@ -5,21 +5,21 @@ router.get('/', (req, res) => {
     res.send('Lista de serviços')
 })
 
-router.get('/servicos', (req, res) => {
+router.get('/services', (req, res) => {
     res.send('Detalhes do serviços')
 })
 
-router.get('/servicos/:id', (req, res) => {
+router.get('/services/:id', (req, res) => {
     res.send('Detalhes dos pets: ' + req.params.id)
 
 })
 
-router.post('/servicos', (req, res) => {
+router.post('/services', (req, res) => {
     res.send('Cadastro de pet')
     
 })
 
-router.put('/servicos/:id', (req, res) => {
+router.put('/services/:id', (req, res) => {
     res.send('Atualização de pet' + req.params.id)
     
 })

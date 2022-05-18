@@ -4,6 +4,7 @@ const homeRouter = require('./routes/home');
 const petsRouter = require('./routes/pets');
 const servicesRouter = require('./routes/services');
 
+app.use(express.static('public'));
 app.set('view engine', 'ejs');
 //app.set('views','./telas');
 
