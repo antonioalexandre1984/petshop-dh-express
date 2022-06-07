@@ -1,31 +1,19 @@
 const express = require('express');
 const router = express.Router();
+const serviceController = require('../controllers/serviceController');
 
-router.get('/', (req, res) => {
-    res.send('Lista de serviços')
-})
+router.get('/adm/services',serviceController.index); 
 
-router.get('/services', (req, res) => {
-    res.send('Detalhes do serviços')
-})
+router.get('/adm/services/register',serviceController.create); 
 
-router.get('/services/:id', (req, res) => {
-    res.send('Detalhes dos pets: ' + req.params.id)
+router.get('/adm/services/:id', serviceController.show);
 
-})
+router.get('/adm/services/:id/edit', serviceController.edit);
 
-router.post('/services', (req, res) => {
-    res.send('Cadastro de pet')
-    
-})
+router.post('/adm/services', serviceController.store);
 
-router.put('/services/:id', (req, res) => {
-    res.send('Atualização de pet' + req.params.id)
-    
-})
+router.put('/adm/services/:id',serviceController.update);
 
-router.delete('/pets/:id', (req, res) => {
-    res.send('Exclusão de pet')
-    
-})
+router.delete('/adm/services/:id', serviceController.destroy);
+
 module.exports = router;

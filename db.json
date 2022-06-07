@@ -1,0 +1,145 @@
+{
+    "services": [
+        {
+            "name": "Carnê referente ao plano de internet 20Mb.",
+            "image": "https://www.petz.com.br/blog/wp-content/uploads/2021/12/porque-cachorro-lambe-tudo-2-1280x720.jpg",
+            "price": "10.00",
+            "active": false,
+            "id": "89b0e52d-ff6b-403c-9cf3-f64684a4071e"
+        },
+        {
+            "name": "Carnê referente ao plano de internet 30Mb.",
+            "description": "sdsadsasda",
+            "image": "https://www.petz.com.br/blog/wp-content/uploads/2021/12/porque-cachorro-lambe-tudo-2-1280x720.jpg",
+            "price": "10.00",
+            "active": false,
+            "id": "aadd6cfd-8d3e-4410-b17c-332925b82d10"
+        },
+        {
+            "name": "Carnê referente ao plano de internet 20Mb.",
+            "description": "sdsdsadsdsdsdsdsdxcxzcxcxzcxz",
+            "image": "https://www.petz.com.br/blog/wp-content/uploads/2021/12/porque-cachorro-lambe-tudo-2-1280x720.jpg",
+            "price": "10.00",
+            "active": false,
+            "id": "f52c0502-a27a-48cd-92b3-4e9e135a2302"
+        },
+        {
+            "name": "Carnê referente ao plano de internet 20Mb.",
+            "description": "aSasAS",
+            "image": "https://www.petz.com.br/blog/wp-content/uploads/2021/12/porque-cachorro-lambe-tudo-2-1280x720.jpg",
+            "price": "100.00",
+            "active": false,
+            "id": "d6f735bb-5003-4c51-b902-949cd827bf3a"
+        },
+        {
+            "name": "Carnê referente ao plano de internet 30Mb.",
+            "image": "erro.png",
+            "price": "50.00",
+            "active": false,
+            "description": "sdsadsadsadsa",
+            "id": "9c63dcaa-7a5b-4029-b2f9-6e75926829f5"
+        },
+        {
+            "name": "https://cdn.diferenca.com/imagens/filhote-de-tartaruga-marinha-cke.jpg",
+            "image": "",
+            "price": "50.00",
+            "active": false,
+            "description": "dsadsdsdsdsdsadsadsad",
+            "id": "dc506307-1bb8-4c57-94e9-53306bb5f8f8"
+        },
+        {
+            "name": "lavagem",
+            "image": "alex-vasey-3lxrM5yvkcI-unsplash.jpg",
+            "price": "50.00",
+            "active": false,
+            "description": "ffffffffffffffffffffffffffffffff",
+            "id": "d7220616-1699-4cd2-b00a-55648fa823b1"
+        },
+        {
+            "name": "Carnê referente ao plano de internet 20Mb.",
+            "image": "Group (1).png",
+            "price": "99",
+            "active": false,
+            "description": "asasasSa",
+            "id": "0a4ce8f5-2948-436b-8680-66b84e567cb6"
+        },
+        {
+            "name": "Carnê referente ao plano de internet 20Mb.",
+            "image": "Group (1).png",
+            "price": "99",
+            "active": false,
+            "description": "asSasasasaS",
+            "id": "9af51c20-aad6-4bdf-b703-e0149749c6b3"
+        },
+        {
+            "image": "",
+            "price": "10.00",
+            "active": false,
+            "description": "",
+            "id": "319ed217-0d25-404b-a2be-648186b2039a"
+        },
+        {
+            "image": "Group (1).png",
+            "price": "10.00",
+            "active": false,
+            "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "id": "b9b80d06-ed32-440a-b618-f5e4aa3c0a85"
+        },
+        {
+            "name": "alexandreeeeee3333",
+            "image": "richard-brutyo-Sg3XwuEpybU-unsplash.jpg",
+            "price": "120.00",
+            "active": false,
+            "description": "lavagem",
+            "id": "92c7e168-d4fd-4fda-affe-12860d7f61b8"
+        },
+        {
+            "name": "ANTONIO ALEXANDRE CORDEIRO DOS SANTOS",
+            "image": "richard-brutyo-Sg3XwuEpybU-unsplash.jpg",
+            "price": "100",
+            "active": false,
+            "description": "tosa",
+            "id": "157a2350-2c9c-48e4-8383-4e990a5c9bea"
+        }
+    ],
+    "pets": [
+        {
+            "image": "https://cdn.diferenca.com/imagens/tartaruga-marinha-cke.jpg",
+            "name": "Estrelinha",
+            "specie": "tartaruga",
+            "id": "4d034206-feea-4417-aeb4-dd5f5c6a8b27"
+        }
+    ],
+    "users": [
+        {
+            "id": 1,
+            "name": "fulano de tal",
+            "email": "antonioasasasas@gmail.com",
+            "senha": "123456789"
+        },
+        {
+            "name": "sdsadsdsdsdsdsdsds",
+            "email": "antonioalexandre19842@gmail.com",
+            "senha": "1020304050",
+            "id": "184ad517-e143-4915-8973-93cb08d6d4ec"
+        },
+        {
+            "name": "joseeeeee silvaaa",
+            "email": "antonioalexandre1984@gmail.com",
+            "senha": "908070",
+            "id": "dd74930e-8ce5-4d09-ad8b-b6e964f62a2b"
+        },
+        {
+            "name": "a",
+            "email": "antonioalexandre1984@gmail.com",
+            "senha": "12",
+            "id": "5e3bf09b-e749-4ce4-bd85-0447f6eb6717"
+        },
+        {
+            "name": "as",
+            "email": "antonioalexandre1984@gmail.com",
+            "senha": "",
+            "id": "78b55380-576d-4309-86c6-02c1585afcb0"
+        }
+    ]
+}
