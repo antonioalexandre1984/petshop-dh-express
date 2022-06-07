@@ -36,7 +36,7 @@
               </tr>
             </thead>
             <tbody>
-              <% for(let service of services){ %>
+              <% services.forEach(service => { %>
               <tr>
                 <th scope="row"><%= service.id %></th>
                 <td>
@@ -70,13 +70,13 @@
                     action="/adm/services/<%= service.id %>?_method=DELETE"
                     method="POST"
                   >
-                    <button type="button" class="btn btn-danger">
+                    <button type="submit" class="btn btn-danger">
                       Excluir
                     </button>
                   </form>
                 </td>
               </tr>
-              <%}%>
+              <%})%>
             </tbody>
           </table>
         </div>

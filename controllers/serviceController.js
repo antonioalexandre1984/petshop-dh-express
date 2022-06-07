@@ -1,4 +1,10 @@
 const Service = require('../models/service');
+const storage = require('../config/storage');
+const fs = require('fs');
+
+
+
+const uploadAvatar = storage('avatar','/services')
 
 const serviceController = {
     
@@ -10,9 +16,6 @@ const serviceController = {
     show: (req, res) => {
         const { id } = req.params;
         const service = Service.findById(id);
-        if (!service) {
-       return res.status(404).render('errors', { error: 'Serviço não encontrado', img:"https://digitea.es/wp-content/uploads/2015/04/404digitea.gif" });
-}
         return res.render('adm/services/details',{service})
     },
 
@@ -21,21 +24,27 @@ const serviceController = {
     },
 
     store: (req, res) => {	
-        const { name,image,price,active,description } = req.body
+        uploadAvatar(req, res, (err) => {   
+        const { name,price,active,description } = req.body
         const service = {
             name,
-            image,
+            image: '/img/services/' + req.file.filename,
             price,
-            active: (active ? true : false),
+            active: (active == "on" ? true : false),
             description,
         };
             Service.save(service)
-            return res.redirect('/adm/services');
+         
+        })
+         return res.redirect('/adm/services'); 
     },
-
+        
     edit: (req, res) => {
         const { id } = req.params;
         const service = Service.findById(id)
+        if (!service) {
+           return res.status(404).render('errors', { error: 'Serviço não encontrado', img:"https://digitea."})
+       }
         return res.render('adm/services/edit', { service });
         
     },
@@ -54,10 +63,24 @@ const serviceController = {
             Service.update(id,service)
             return res.redirect('/adm/services');
     },
+
     destroy: (req, res) => {
         const { id } = req.params;
+        const service = Service.findById(id);
+
+        if (!service) {
+            return res.status(404).render('errors', { error: 'Serviço não encontrado', img:"https://digitea.es/wp-content/uploads/2015/04/404digitea.gif" });
+        }
+         
         Service.delete(id);
+        try {
+        fs.unlinkSync('./public' + service.image)    
+            }catch(err){
+            console.log(err)
+        }
+        fs.unlinkSync('./public' + service.image)
         return res.redirect('/adm/services');
-    }
+    },
+
 }
 module.exports = serviceController;

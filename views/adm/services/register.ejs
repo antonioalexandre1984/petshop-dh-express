@@ -22,21 +22,17 @@
         <div class="container">
           <h1>Cadastro de serviços</h1>
 
-          <form method="POST" action="/adm/services" enctype="multipart/form-data" >
-
           <a href="/adm/services" class="btn btn-primary mb-2"
             >Lista de serviços</a
           >
-          <form form action="/adm/services" method="POST" >
+          <form
+            method="POST"
+            action="/adm/services"
+            enctype="multipart/form-data"
+          >
             <div class="mb-3">
               <label for="" class="form-label">Imagem</label>
-              <input
-                type="file"
-                name="avatar"
-                id="image"
-                class="form-control"
-                id=""
-              />
+              <input type="file" name="avatar" class="form-control" />
             </div>
             <div class="mb-3">
               <label for="" class="form-label">Nome</label>
@@ -57,7 +53,7 @@
                 id="price"
                 class="form-control"
                 id=""
-                 placeholder="R$ 0,00"
+                placeholder="R$ 0,00"
               />
             </div>
             <div class="mb-3 form-check">
@@ -67,7 +63,8 @@
                 id="exampleCheck1"
               />
               <label class="form-check-label" name="ativo" for="exampleCheck1"
-                >Ativo</label>
+                >Ativo</label
+              >
             </div>
 
             <div class="mb-3">

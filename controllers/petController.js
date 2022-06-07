@@ -1,5 +1,8 @@
 const Pet = require('../models/pet');
+const storage = require('../config/storage');
+const fs = require('fs');
 
+const uploadPet = storage('avatarPet', '/pets');
 
 const petController = {
 
@@ -20,15 +23,17 @@ const petController = {
         return res.render('adm/pets/register');
     },
 
-      store: (req, res) => {	
-        const { image, name, specie } = req.body
-          const pet = {
-            image,
-            name,   
-            specie,
-        };
-            Pet.save(pet)
+    store: (req, res) => {	
+        uploadPet(req, res, (err) => {
+            const { name, specie } = req.body;
+            const pet = {
+                image: '/img/pets/' + req.file.filename,
+                name,
+                specie,
+            };
+            Pet.save(pet);
             return res.redirect('/adm/pets');
+        })
     },
 
      edit: (req, res) => {

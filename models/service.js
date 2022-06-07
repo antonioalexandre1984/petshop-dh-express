@@ -46,7 +46,8 @@ const Service = {
                 const index = db.services.findIndex(service => service.id == id);
                 db.services.splice(index,1);
                 store(db);
-    },
+                    
+       },
 }
 
 module.exports = Service;
