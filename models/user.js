@@ -26,6 +26,13 @@ const User = {
         return user;
     },
 
+       findByEmail: (email) => {
+        const db = open();
+        const user = db.users.find(user => user.email == email);    
+        return user;
+    },
+
+
           save: (user) => {
             const db = open();
             user.id = geradorDeId();

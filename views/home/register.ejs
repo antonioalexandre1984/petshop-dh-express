@@ -6,32 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PETSHOP DH</title>
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/homeRegister.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <style>
-      .errors {
-        margin-bottom: 20px;
-      }
-      .errors h3 {
-        color: red;
-      }
-
-      .erros li {
-        color: red;
-      }
-
-      .container form {
-        width: 50%;
-      }
-
-      .container form label {
-        font-weight: bold;
-      }
-    </style>
   </head>
 
   <body>
@@ -41,24 +22,28 @@
       <section class="servicos-lista">
         <div class="container">
           <h1>Cadastro de Usuário</h1>
-          <div class="errors"></div>
-          <% if(typeof listoferros != "undefined"){%>
-          <h1>Erros</h1>
-          <ul>
-            <% for (let error of listoferros){%>
-            <li><%= error.msg %></li>
+          <div class="errors">
+            <% if(typeof listOfErros !== "undefined"){%>
+            <h3>Erros</h3>
+
+            <ul>
+              <% for (let error of listOfErros){%>
+              <li><%= error.msg %></li>
+              <%}%>
+            </ul>
             <%}%>
-          </ul>
-          <%}%>
-          <form action="/registrar" method="POST">
+          </div>
+
+          <form action="/register" method="POST">
             <div class="mb-3">
               <label for="nome" class="form-label">Nome</label>
               <input
                 type="text"
                 name="name"
-                id="nome"
+                id="name"
                 class="form-control"
                 placeholder="Insira o seu nome"
+                value="<%= locals.old && old.name%>"
               />
             </div>
 
@@ -70,6 +55,7 @@
                 id="email"
                 class="form-control"
                 placeholder="seuemail@exemplo.com"
+                value="<%= locals.old && old.email%>%>"
               />
             </div>
 
@@ -77,24 +63,23 @@
               <label for="senha" class="form-label">Senha</label>
               <input
                 type="password"
-                name="senha"
-                id="senha"
+                name="password"
+                id="password"
                 class="form-control"
                 placeholder="********"
               />
             </div>
-
             <div class="mb-3">
               <label for="confirmacaoSenha" class="form-label"
                 >Confirmação da Senha</label
               >
-              <!--   <input
+              <input
                 type="password"
-                name="confirmacaoSenha"
+                name="password_Confirmation"
                 id="senha"
                 class="form-control"
                 placeholder="********"
-              /> -->
+              />
             </div>
 
             <button type="submit" class="btn btn-primary">Cadastrar</button>

@@ -15,7 +15,7 @@
   </head>
 
   <body>
-    <%- include('../../partials/header') %>
+    <%- include('../../partials/adm/header') %>
 
     <main>
       <section class="servicos-lista">
@@ -33,7 +33,7 @@
               <input
                 type="file"
                 name="image"
-                value="<%= service.image %>"
+                value="<%=service.image %>"
                 class="form-control"
                 id=""
               />
@@ -43,7 +43,7 @@
               <input
                 type="text"
                 name="name"
-                value="<%= service.name %>"
+                value="<%=service.name %>"
                 class="form-control"
                 id=""
               />
@@ -53,7 +53,7 @@
               <input
                 type="number"
                 name="price"
-                value="<%= service.price %>"
+                value="<%=service.price %>"
                 class="form-control"
                 id=""
               />
@@ -72,7 +72,7 @@
             <div class="mb-3">
               <textarea
                 name="description"
-                value="<%= service.description %>"
+                value="<%=service.description %>"
                 class="form-control"
                 cols="30"
                 rows="10"

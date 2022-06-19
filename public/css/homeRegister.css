@@ -1,0 +1,19 @@
+.errors {
+    margin-bottom: 20px;
+}
+
+.errors h3 {
+    color: red;
+}
+
+.erros li {
+    color: red;
+}
+
+.container form {
+    width: 50%;
+}
+
+.container form label {
+    font-weight: bold;
+}

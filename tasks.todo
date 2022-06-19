@@ -19,9 +19,9 @@ Aula 06/06 - Middlewares:
     O objetivo desta aula será criar middlewares global e por rota, realizando os passos acima, estaremos com a estrutura base pronta para iniciarmos a aula de hoje:
     
     1º Atividade:
-    Criar um middleware que será aplicado globalmente para gerar um log de todas as requisições realizadas em nossa aplicação. O nome do log será: requisicoesLog, o seu arquivo deverá ficar salvo dentro da pasta middlewares. No arquivo do log deve conter as seguintes informações:
+    ☐ Criar um middleware que será aplicado globalmente para gerar um log de todas as requisições realizadas em nossa aplicação. O nome do log será: requisicoesLog, o seu arquivo deverá ficar salvo dentro da pasta middlewares. No arquivo do log deve conter as seguintes informações:
         ✔ Criar a pasta middlewares @done(22-06-06 20:24)
-        ✔ Dentro da pasta middlewares, criar o arquivo: requisicoesLog.js @done(22-06-06 20:24)
+        ✔ Dentro da pasta middlewares, criar o arquivo: requisicoesLog.js @done(22-06-17 20:22)
         ✔ Deve capturar o ip do usuário @done(22-06-06 20:37)
         ✔ Deve informar qual foi o metodo HTTP que foi solicitado @done(22-06-06 20:37)
         ✔ Deve informar qual rota foi acessada @done(22-06-06 20:37)

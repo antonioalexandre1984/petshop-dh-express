@@ -1,47 +1,76 @@
 const Service = require('../models/service');
 const User = require('../models/user');
-const { validationResult } = require('express-validator');
+const {validationResult } = require('express-validator');
+const bcrypt = require('bcryptjs');
 
 const homeController = {
     index: (req, res) => {
         const title = 'Minha primeira aplicação com ejs;'
-        res.render('home',{title});
+        return res.render('home',{title});
+    },
+    showAdm: (req, res) => {       
+        const { email, password } = req.body;
+        const {id } = req.params;
+        const user = User.findById(id);
+    
+        
+        return res.render('adm/');
+    },
+
+    postLogin: (req, res) => {
+      const { email,password } = req.body;
+        const user = User.findByEmail(email);
+
+        if (!user || !bcrypt.compareSync(password, user.password)) {
+            return res.render("home/login", { error: 'Email ou senha incorreto ou não existe' });
+        }
+        req.session.user = user;
+      
+        return res.redirect("/adm");
     },
 
     upon: (req, res) => {
         res.render('home/upon');
     },
+
     services: (req, res) => {
         const services = Service.findAll();
-        res.render('home/services',{services})
+        return res.render('home/services',{services})
     },
-    login: (req, res) => {
-        res.send('home/Login');
-    },  
+     login: (req, res) => {
+        return res.render('home/login');
+    },
     contact: (req, res) => {
-        res.send('home/contact');
+        return res.render('home/contact');
     },      
 
-     create: (req, res) => {
-        res.render('home/registro');
+    create: (req, res) => {
+        return res.render('home/register');
     },
 
     store: (req, res) => {	
         let errors = validationResult(req);
-        console.log(errors);
 
-        if (errors.isEmpty) {
-            const { name, email, senha } = req.body
+        const passwordCrypto = bcrypt.hashSync(req.body.password, 10);
+
+        if (errors.isEmpty()) {
+            const {name, email} = req.body
             const user = {
                 name,
                 email,
-                senha
+                password:passwordCrypto 
             };
             User.save(user)
-            return res.redirect('/');
+            return res.redirect('/adm');
         }
-       res.render('home/registro',{listoferros:erros.erros}) 
+       return res.render('home/register',{listOfErros:errors.errors,old:req.body}) 
     },
+
+    
+    logout: (req, res) => {
+        req.session.destroy(function(err) {console.log(err)});
+        res.redirect("/login");
+    }
 
 }
 

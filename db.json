@@ -1,5 +1,14 @@
 {
-    "services": [],
+    "services": [
+        {
+            "name": "Carnê referente ao plano de internet 20Mb.",
+            "image": "/img/services/1655518278886-comportamento-dos-gatos-1.jpg",
+            "price": "100",
+            "active": false,
+            "description": "fgdfhgfhgffghfghgf",
+            "id": "6e4c05d7-f031-49bd-94bd-699fa26a845e"
+        }
+    ],
     "pets": [
         {
             "image": "/img/pets/1654640534371-richard-brutyo-Sg3XwuEpybU-unsplash.jpg",
@@ -8,5 +17,18 @@
             "id": "b7bfa6d5-74ac-43a4-b691-fa2637d92aaf"
         }
     ],
-    "users": []
+    "users": [
+        {
+            "name": "carla",
+            "email": "carla@gmail.com",
+            "password": "$2a$10$Ur2ZgmJy3TiAvrQlsSmZYOpC8cnoXP2054k.dg0O1wSq0JOKDBNvy",
+            "id": "fd0a96a8-76b9-4d95-87f5-4b20b229c5f3"
+        },
+        {
+            "name": "Jack",
+            "email": "jack@gmail.com",
+            "password": "$2a$10$It673tAVjXgsZbOYY14zOuP4BltOVjyao3FNPYuphrryaSVOINbqu",
+            "id": "2be76649-5b08-4ca6-87af-ee0e453b3085"
+        }
+    ]
 }
